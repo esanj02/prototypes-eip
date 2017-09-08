@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+		
+	<groupId>prototype.eip</groupId>
+	<artifactId>prototype-eip</artifactId>
+	<version>0.0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>prototype-eip-parent</name>
+	
+	<prerequisites>
+		<maven>3.0</maven>
+	</prerequisites>
+	
+	<properties>
+		<encoding.type>ISO-8859-1</encoding.type>
+		<java.version>1.8</java.version>
+		
+		<maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
+		
+		<spring.boot.bom>spring-boot-dependencies</spring.boot.bom>
+		<spring.boot.bom.version>1.5.6.RELEASE</spring.boot.bom.version>		
+		<spring.cloud.bom>spring-cloud-dependencies</spring.cloud.bom>
+		<spring.cloud.bom.version>Camden.SR5</spring.cloud.bom.version>
+		<spring.io.bom>platform-bom</spring.io.bom>
+		<spring.io.bom.version>Brussels-SR4</spring.io.bom.version>
+		
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<modules>
+		<module>prototype-eip-camel</module>
+		<module>prototype-eip-mule</module>
+		<module>prototype-eip-spring</module>
+	</modules>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.compiler.plugin.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<compilerArgument>-Xlint:all</compilerArgument>
+					<showWarnings>true</showWarnings>
+					<showDeprecation>false</showDeprecation>
+					<optimize>true</optimize>
+					<debug>true</debug>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<dependencyManagement>
+		<dependencies>			
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>${spring.boot.bom}</artifactId>
+				<version>${spring.boot.bom.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>			
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>${spring.cloud.bom}</artifactId>
+				<version>${spring.cloud.bom.version}</version>				
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>io.spring.platform</groupId>
+				<artifactId>${spring.io.bom}</artifactId>
+				<version>${spring.io.bom.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>			
+		</dependencies>
+	</dependencyManagement>
+	
+	<dependencies>
+	
+	</dependencies>
+	
+</project>
