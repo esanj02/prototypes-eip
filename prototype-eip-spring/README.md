@@ -1,4 +1,4 @@
-# prototypes-eip
+# prototypes-eip-spring
 Prototype project - to show case event error handling strategy based on the spring integration framework EIP implementation
 
 

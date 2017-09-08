@@ -1,4 +1,4 @@
-# prototypes-eip
+# prototypes-eip-camel
 Prototype project - to show case event error handling strategy based on the apache camel EIP framework implementation
 
 

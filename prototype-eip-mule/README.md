@@ -1,4 +1,4 @@
-# prototypes-eip
+# prototypes-eip-mule
 Prototype project - to show case event error handling strategy based on the Mulesoft mule EIP framework implementation
 
 
