@@ -11,7 +11,7 @@ Prototype project - to show case event error handling strategy based on the Mule
 | Java | 1.8 |
 | Maven | 3.0.x > higher |
 | Spring boot | 1.5.6.RELEASE > higher |
-| Apache Camel | 2.18.2 > higher |
+| Mulesoft mule | 3.8.1 > higher |
 
 
 ### Maven
