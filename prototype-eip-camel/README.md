@@ -3,10 +3,10 @@ Prototype project - to show case event error handling strategy based on the apac
 
 
 ### References
-	*[Spring Boot] (https://projects.spring.io/spring-boot/)
-	*[Spring Integration] (https://projects.spring.io/spring-integration/)
+	[Spring Boot] (https://projects.spring.io/spring-boot/)
+	[Spring Integration] (https://projects.spring.io/spring-integration/)
 	
-### Pre-requisites
+### Tools
 | Dependency | Version |
 | ------ | ------ |
 | Java | 1.8 |
