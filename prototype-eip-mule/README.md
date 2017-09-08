@@ -3,8 +3,8 @@ Prototype project - to show case event error handling strategy based on the Mule
 
 
 ### References
-*[Spring Boot](https://projects.spring.io/spring-boot/)
-*[Spring Integration](https://projects.spring.io/spring-integration/)
+* [Spring Boot](https://projects.spring.io/spring-boot/)
+* [Spring Integration](https://projects.spring.io/spring-integration/)
 	
 ### Tools
 | Dependency | Version |
