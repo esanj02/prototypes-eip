@@ -4,7 +4,7 @@ Prototype project - to show case event error handling strategy based on the Mule
 
 ### References
 * [Spring Boot](https://projects.spring.io/spring-boot/)
-* [Spring Integration](https://projects.spring.io/spring-integration/)
+* [Mule](https://www.mulesoft.com/)
 	
 ### Tools
 | Dependency | Version |
@@ -19,5 +19,9 @@ Prototype project - to show case event error handling strategy based on the Mule
 
 #### Create project
 ```sh
-$ mvn archetype:generate -DgroupId=prototype.eip.mule -DartifactId=prototype-eip-mule -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+$ mvn archetype:generate \
+		-DgroupId=prototype.eip.mule \
+		-DartifactId=prototype-eip-mule \
+		-DarchetypeArtifactId=maven-archetype-quickstart \
+		-DinteractiveMode=false
 ```

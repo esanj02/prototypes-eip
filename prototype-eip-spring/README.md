@@ -19,5 +19,9 @@ Prototype project - to show case event error handling strategy based on the spri
 
 #### Create project
 ```sh
-$ mvn archetype:generate -DgroupId=prototype.eip.spring -DartifactId=prototype-eip-spring -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+$ mvn archetype:generate \
+		-DgroupId=prototype.eip.spring \
+		-DartifactId=prototype-eip-spring \
+		-DarchetypeArtifactId=maven-archetype-quickstart \
+		-DinteractiveMode=false
 ```
