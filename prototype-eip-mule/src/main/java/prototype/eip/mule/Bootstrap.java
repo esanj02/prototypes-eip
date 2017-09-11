@@ -1,4 +1,4 @@
-package prototype.eip.camel;
+package prototype.eip.mule;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +21,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(
 		basePackages = { 
-			"prototype.eip.camel" 
+			"prototype.eip.mule" 
 		}
 	)
 @EnableAutoConfiguration(

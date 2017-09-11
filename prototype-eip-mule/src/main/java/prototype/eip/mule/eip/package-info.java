@@ -5,4 +5,4 @@
  * @author jidee
  *
  */
-package prototype.eip.camel.config;
+package prototype.eip.mule.eip;
