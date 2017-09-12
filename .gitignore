@@ -14,6 +14,14 @@ buildNumber.properties
 
 
 # Eclipse
+
+bin
+bin/*
+bin/**
+**/bin
+/bin/
+*/bin/*
+
 .classpath
 .classpath/*
 .classpath/**
