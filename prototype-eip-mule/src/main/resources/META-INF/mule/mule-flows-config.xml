@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mule version="CE-3.6.2" 
+	  xmlns="http://www.mulesoft.org/schema/mule/core"
+	  xmlns:amqp="http://www.mulesoft.org/schema/mule/amqp"
+      xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:json="http://www.mulesoft.org/schema/mule/json"
+      xmlns:mule-xml="http://www.mulesoft.org/schema/mule/xml"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:spring-context="http://www.springframework.org/schema/context"
+      xmlns:stdio="http://www.mulesoft.org/schema/mule/stdio"
+      xmlns:vm="http://www.mulesoft.org/schema/mule/vm"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="  
+      			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+      			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+      			http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/mule.xsd
+				http://www.mulesoft.org/schema/mule/amqp http://www.mulesoft.org/schema/mule/amqp/mule-amqp.xsd
+				http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/mule-json.xsd
+				http://www.mulesoft.org/schema/mule/stdio http://www.mulesoft.org/schema/mule/stdio/mule-stdio.xsd
+				http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/mule-vm.xsd
+				http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/mule-xml.xsd">
+
+
+	<spring:beans>
+		<spring:import resource="mule-flows-common-config.xml" />
+	</spring:beans>  
+
+	
+	<flow name="main" initialState="stopped">
+	
+		<scatter-gather timeout="5000">
+			<!-- <custom-aggregation-strategy ref="testAggregationStrategy" /> -->
+			<flow-ref name="flowRef-1" />
+			<flow-ref name="flowRef-2" />
+			<flow-ref name="flowRef-3" />
+		</scatter-gather>
+
+	</flow>
+	
+
+</mule>

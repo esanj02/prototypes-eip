@@ -15,9 +15,10 @@
 	<version>0.0.0.1-SNAPSHOT</version>
 	<name>prototype-eip-mule</name>
 	<url>http://maven.apache.org</url>
-	
+	 
 	<properties>
 		<mule.version>3.8.1</mule.version>	
+		<mule.tools.version>1.3</mule.tools.version>
 	</properties>
 	
 	<build>
@@ -33,8 +34,31 @@
 					<include>**/*.yml</include>
 				</includes>
 			</resource>
-		</resources>		
+		</resources>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.mule.tools.maven</groupId>
+					<artifactId>mule-app-maven-plugin</artifactId>
+					<version>${mule.tools.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>		
 		<plugins>
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-app-maven-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<copyToAppsDirectory>true</copyToAppsDirectory>
+					<inclusions>
+						<inclusion>
+							<groupId>org.mule.modules</groupId>
+							<artifactId>mule-module-apikit</artifactId>
+						</inclusion>
+					</inclusions>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -54,6 +78,11 @@
 		<dependency>
 			<groupId>org.mule.modules</groupId>
 			<artifactId>mule-module-spring-config</artifactId>
+			<version>${mule.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-module-apikit</artifactId>
 			<version>${mule.version}</version>
 		</dependency>
 		<dependency>

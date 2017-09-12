@@ -13,6 +13,7 @@ Prototype project - to show case event error handling strategy based on the Mule
 | Maven | 3.0.x > higher |
 | Spring boot | 1.5.6.RELEASE > higher |
 | Mulesoft mule | 3.8.1 > higher |
+| Mulesoft Anypoint account | Optional |
 
 
 ### Maven
