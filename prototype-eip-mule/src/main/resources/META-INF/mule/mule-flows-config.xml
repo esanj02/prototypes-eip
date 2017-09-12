@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mule version="CE-3.6.2" 
+<mule version="CE-3.8.1" 
 	  xmlns="http://www.mulesoft.org/schema/mule/core"
 	  xmlns:amqp="http://www.mulesoft.org/schema/mule/amqp"
       xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
